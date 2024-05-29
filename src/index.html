@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head">
+        <h1>Task Master</h1>
+    </div>
+    <div class="box">
+        <div class="project">
+            <div class="proj-title">
+                <h2>Project</h2>
+                <button class="add-project">+</button>
+            </div>
+            <dialog class="projectDialog">
+                <div class="projectClosebutton">
+                    <button class="projectClosebtn">X</button>
+                </div>
+                <form action="" class="projectForm" method="post">
+                    <div class="title">
+                        <label for="n">Project title : </label>
+                        <input type="text" id="n" required>
+                    </div>
+                    <div class="projectButton">
+                        <button type="submit" class="projectSubmitbtn">Add Project</button>
+                    </div>
+                </form>
+            </dialog>
+            <ul class="projectList"></ul>
+        </div>
+        <div class="task">
+            <div class="task-title">
+                <h2>Tasks</h2>
+                <button class="add-task">+</button>
+                <dialog class="taskDialog">
+                    <div class="closebutton">
+                        <button class="closebtn">X</button>
+                    </div>
+                    <form action="" class="taskForm" method="post">
+                        <div class="title cont">
+                            <label for="name">Title: </label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="des cont">
+                            <label for="description">Description :</label>
+                            <input type="text" id="description" maxlength="55" required>
+                        </div>
+                        <div class="date cont">
+                            <label for="due">Date :</label>
+                            <input type="date" id="due" required>
+                        </div>
+                        <div class="importance cont">
+                            <label for="priority">Priority: </label>
+                            <select name="priority" id="priority" required>
+                                <option value="low">low</option>
+                                <option value="medium">medium</option>
+                                <option value="high">high</option>
+                            </select>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="submitbtn">Add Task</button>
+                        </div>
+                    </form>
+                </dialog>
+            </div>
+            <ul class="taskList"></ul>
+        </div>
+    </div>
+</body>
+</html>

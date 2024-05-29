@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.head h1{
+    height: 15vh;
+    font-size: 40px;
+    background: linear-gradient(135deg, #FFF9C4, #FFE0B2, #FFCDD2, #E1BEE7, #BBDEFB, #C8E6C9);
+    display: flex;
+    align-items: center;
+    font-family: "Lucida Handwriting", cursive, sans-serif;
+    padding-left: 2rem ;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
+}
+
+
+
+.box{
+display: grid;
+grid-template-columns: 30% 70%;
+}
+
+.proj-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-title{
+    display: flex;
+    align-items: center;
+    gap: 50rem;
+}
+
+.add-project, .add-task{
+    width: 50px;           /* Set the width of the button */
+    height: 50px;          /* Set the height of the button */
+    border-radius: 50%;    /* Makes the button circular */
+    border: none;          /* Optional: Remove default border */
+    background-color: #4CAF50; /* Set background color */
+    color: white;          /* Set text color */
+    text-align: center;    /* Center the text */
+    font-size: 30px;       /* Set font size */
+    cursor: pointer;       /* Change cursor on hover */
+    display: inline-block; /* Ensures it behaves like a button */
+    line-height: 50px;
+    margin-right: 20px;    
+    transition: transform 0.3s ease; 
+}
+
+.add-project:hover, .add-task:hover{
+    transform: rotate(90deg);
+
+}
+
+.project{
+    background-color: rgb(131, 191, 191);
+    min-height: 85vh;
+}
+
+.project h2, .task h2{
+    font-size: 30px;
+    padding: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.task{
+    background-color: rgb(203, 132, 132);
+    min-height: 85vh;
+}
+
+
+.taskDialog, .projectDialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #fff;
+    max-width: 500px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.taskForm, .projectForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.taskForm label, .projectForm label {
+    font-weight: bold;
+}
+
+.taskForm input, .taskForm select, .projectForm input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.taskForm .button, .projectForm .button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submitbtn, .closebtn, .projectClosebtn, .projectSubmitbtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.closebutton, .projectClosebutton{
+    display: flex;
+    justify-content: end;
+}
+
+.submitbtn, .projectSubmitbtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.closebtn, .projectClosebtn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* JavaScript-injected styles for dropdown */
+.priority-dropdown {
+    background-color: white;
+}
+
+/* Custom styles for priority options */
+select#priority option[value="low"] {
+    background-color: lightgreen;
+    color: green;
+}
+
+select#priority option[value="medium"] {
+    background-color: lightyellow;
+    color: orange;
+}
+
+select#priority option[value="high"] {
+    background-color: lightcoral;
+    color: red;
+}
+
+
+.checked {
+    background-color: #f2f2f2; /* Lighter color */
+    text-decoration: line-through; /* Line-through text */
+}
