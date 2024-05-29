@@ -1,29 +1,32 @@
 import "./style.css";
-import { createTask, taskDialog } from "./task";
-import { createProject, projectDialog } from "./project";
+import { formValue, createTask, taskDialog } from "./task";
+import { projectValue, createProject, projectDialog } from "./project";
 
 document.addEventListener("DOMContentLoaded", () => {
     const addTaskButton = document.querySelector(".add-task");
     const addProjectButton= document.querySelector(".add-project")
 
+
     addTaskButton.addEventListener("click", () => {
         
         taskDialog()
+        document.getElementById('name').focus()
     });
 
     addProjectButton.addEventListener("click", ()=>{
         projectDialog()
+        document.getElementById('n').focus()
     })
-
-
+    
+    
     document.querySelector(".submitbtn").addEventListener("click", (event) => {
         event.preventDefault();
-        createTask();
+        formValue();
     });
 
     document.querySelector(".projectSubmitbtn").addEventListener("click", (event) => {
         event.preventDefault();
-        createProject();
+        projectValue();
     });
     
     // document.querySelector(".closebtn").addEventListener("click", (event) => {

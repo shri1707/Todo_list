@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="head">
         <h1>Task Master</h1>
@@ -66,8 +68,23 @@
                     </form>
                 </dialog>
             </div>
-            <ul class="taskList"></ul>
+            <ul class="taskList">
+                <li class="taskItem">
+                    <input type="checkbox" class="taskCheckbox" required>
+                    <h3 class="taskTitle">  <strong>Title: </strong>xyz</h3>
+                    <p class="taskDes"> <strong>Description: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                        molestias enim, quisquam itaque laboriosam ducimus maxime neque vitae explicabo pariatur
+                        necessitatibus porro quia, incidunt corporis non error at eligendi veritatis animi, maiores
+                        velit facere? Voluptatem perspiciatis modi laudantium ipsum praesentium.</p>
+                    <p class="taskDue"><strong>Due Date: </strong>17/07/2005</p>
+                    <p class="taskPriority"> <strong>Priority: </strong> medium</p>
+
+                    <button class="deleteTask"><img src="/SVGs/trash-can-outline.svg" alt=""></button>
+                    <button class="editTask"><img src="/SVGs/file-edit-outline.svg" alt=""></button>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
+
 </html>
